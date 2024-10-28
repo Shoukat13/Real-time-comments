@@ -9,10 +9,11 @@ const server = http.createServer(app);
 const io = new Server(server);
 app.use(cors());
 const db = mysql.createConnection({
-  host: 'localhost',
+  host:  '127.0.0.1',
   user: 'Shoukat',     // MySQL username
   password: 'Shoukat@44',  // MySQL password
-  database: 'comments_db'
+  database: 'comments_db',
+  port: 3306
 });
 
 // making connection to DB
